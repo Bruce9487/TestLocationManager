@@ -13,6 +13,7 @@
 		DAB7845C2267802500595F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB7845B2267802500595F02 /* Assets.xcassets */; };
 		DAB7845F2267802500595F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB7845D2267802500595F02 /* LaunchScreen.storyboard */; };
 		DAB784622267802500595F02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB784612267802500595F02 /* main.m */; };
+		DAB7846A2267822A00595F02 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB784692267822A00595F02 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DAB7845E2267802500595F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAB784602267802500595F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB784612267802500595F02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAB784692267822A00595F02 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB7846A2267822A00595F02 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				DAB784512267802400595F02 /* TestLocationManager */,
 				DAB784502267802400595F02 /* Products */,
+				DAB784682267822A00595F02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +73,14 @@
 				DAB784612267802500595F02 /* main.m */,
 			);
 			path = TestLocationManager;
+			sourceTree = "<group>";
+		};
+		DAB784682267822A00595F02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAB784692267822A00595F02 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +114,11 @@
 				TargetAttributes = {
 					DAB7844E2267802400595F02 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -286,7 +303,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAQUJAQK24;
 				INFOPLIST_FILE = TestLocationManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +321,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAQUJAQK24;
 				INFOPLIST_FILE = TestLocationManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
